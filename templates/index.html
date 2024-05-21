@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Log In | Sekret RPG</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <form action="/form_login" method="post">
+            <h1>Login</h1>
+            <div class = "inputBox">
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div class = "inputBox">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <input type="submit" value="Login" class="loginBtn">
+            <div class="signup">
+                <p>Don't have an account?</p>
+            <br>
+                <a href="#">Sign up</a>
+            </div>
+        </form>
+        <div class="ouput">
+            <h1>{{info}}</h1>
+        </div>
+    </body>
+</html>
